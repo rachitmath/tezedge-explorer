@@ -1,6 +1,6 @@
 <div class="chain">
     <div class="chain-row">
-        <mat-expansion-panel class="chain-message-card" hideToggle>
+        <mat-expansion-panel class="chain-message-card" hideToggle [expanded]="true">
             <mat-expansion-panel-header class="chain-card-title">
                 <mat-panel-title>
                     <span>
@@ -14,7 +14,62 @@
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi rem iste recusandae voluptate,
                     maiores explicabo amet sit dolorum ullam veritatis nemo consequatur officia. Quisquam vitae fugit
                     debitis exercitationem doloribus totam?</p>
+                <div class="chain-link">
+                    <a mat-button href="https://www.google.com/" target="_blank">
+                        <img style="margin-right: 7px;" src="../../../assets/icon/external-link-alt.svg">
+                        Open Documentation
+                    </a>
+                </div>
             </div>
         </mat-expansion-panel>
+
+        <div class="chain-form">
+            <form action="">
+                <div class="chain-form-group">
+                    <p class="chain-form-title">HOSTNAME</p>
+                    <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat
+                        perferendis officiis aperiam quod animi blanditiis labore beatae atque laboriosam aspernatur
+                        cum, fugit voluptatem aut fuga id sed nisi suscipit odit?</p>
+                    <mat-form-field appearance="fill">
+                        <mat-select [value]="'1'">
+                            <mat-option value="1">127.0.0.1</mat-option>
+                            <mat-option value="2">127.0.0.1</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="chain-form-group">
+                    <p class="chain-form-title">Port</p>
+                    <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat
+                        perferendis officiis aperiam quod animi</p>
+                    <mat-form-field appearance="fill">
+                        <input matInput type="number" value="7545">
+                    </mat-form-field>
+                </div>
+
+                <div class="chain-form-group">
+                    <p class="chain-form-title">Chain ID</p>
+                    <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat
+                        perferendis officiis aperiam quod animi</p>
+                    <mat-form-field appearance="fill">
+                        <input matInput type="number" value="5775">
+                    </mat-form-field>
+                </div>
+
+                <div class="chain-form-group">
+                    <p class="chain-form-title">AUTOBAKE</p>
+                    <p class="chain-form-desc">Lorem ipsum dolor sit amet</p>
+                    <mat-slide-toggle (change)="onChangeAutoBake($event)">{{autobakeSlideText}}</mat-slide-toggle>
+                </div>
+
+                <div class="chain-form-group">
+                    <p class="chain-form-title">Chain ID</p>
+                    <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat
+                        perferendis officiis aperiam quod animi</p>
+                    <mat-slide-toggle (change)="onChangeChaneId($event)" sliderChecked>{{chainIdSlideText}}
+                    </mat-slide-toggle>
+                </div>
+            </form>
+        </div>
     </div>
 </div>

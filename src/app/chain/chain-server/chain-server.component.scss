@@ -1,13 +1,89 @@
-.chain-message-card {
-    color: #f0f3f7;
-    background-color: #2f3848;
-    border: 1px solid #434b5b;
-    box-sizing: border-box;
-    border-radius: 4px;
-    margin: 10px;
-    width: 720px;
+.chain-row {
+    .chain-message-card {
+        color: rgba(240, 243, 247, 0.6);
+        background-color: transparent;
+        border: 1px solid #434b5b;
+        box-sizing: border-box;
+        border-radius: 4px;
+        margin: 10px;
+        width: 720px;
 
-    .chain-card-title mat-panel-title {
-        color: #f6f9fc;
+        mat-expansion-panel-header {
+            border-bottom: 1px solid #434b5b;
+        }
+
+        .chain-card-title mat-panel-title {
+            color: rgba(240, 243, 247, 0.6);
+            justify-content: space-between;
+        }
+
+        .chain-card-content .chain-link a {
+            color: rgba(240, 243, 247, 0.4);
+            padding: 0;
+        }
     }
+
+    .chain-form {
+        padding: 0 10px;
+        margin-top: 40px;
+
+        .chain-form-group {
+            width: 720px;
+            color: #ffffff;
+            margin: 20px 0;
+
+            .chain-form-title {
+                color: #ffffff;
+            }
+
+            .chain-form-desc {
+                color: rgba(240, 243, 247, 0.4);
+            }
+        }
+
+        mat-form-field {
+            background: #3f3f43;
+            border-radius: 4px;
+            width: 320px;
+            color: #ffffff;
+        }
+    }
+}
+
+::ng-deep .mat-form-field-wrapper {
+    height: 40px;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-select-arrow-wrapper {
+    transform: translateY(0%);
+}
+
+::ng-deep .mat-select-arrow {
+    border-left: 5px solid transparent !important;
+    border-right: 5px solid transparent !important;
+    border-top: 5px solid !important;
+}
+
+::ng-deep .mat-form-field-underline {
+    display: none;
+}
+
+::ng-deep input.mat-input-element {
+    margin-top: 4px;
+}
+
+::ng-deep .mat-slide-toggle-bar {
+    background: #3f3f43;
+}
+
+::ng-deep .mat-slide-toggle-thumb {
+    background: #555558;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    background: #3f3f43;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    background: #ffffff;
 }

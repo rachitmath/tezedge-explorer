@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'app-chain-server',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChainServerComponent implements OnInit {
 
+  public autobakeSlideText = 'DISABLED';
+  public chainIdSlideText = 'ENABLED';
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onChangeAutoBake(event: MatSlideToggleChange) {
+    if (event.checked) {
+      this.autobakeSlideText = 'ENABLED';
+    } else {
+      this.autobakeSlideText = 'DISABLED';
+    }
+  }
+
+  onChangeChaneId(event: MatSlideToggleChange) {
+    if (event.checked) {
+      this.chainIdSlideText = 'ENABLED';
+    } else {
+      this.chainIdSlideText = 'DISABLED';
+    }
+  }
 }

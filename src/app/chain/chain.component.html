@@ -22,6 +22,11 @@
             <mat-horizontal-stepper [linear]="true" #stepper>
                 <mat-step [editable]="false" [optional]="false" [completed]="true" label="Server">
                     <app-chain-server></app-chain-server>
+
+                    <button mat-button matStepperNext>
+                        Continue
+                        <img style="margin-left: 7px;" src="../../assets/icon/arrow-right.svg">
+                    </button>
                 </mat-step>
 
                 <mat-step [editable]="false" [optional]="false" label="Chain">

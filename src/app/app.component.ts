@@ -38,7 +38,6 @@ export class AppComponent {
     // select store data
     this.store.select('app')
       .subscribe(data => {
-        console.log(data);
         this.app = data;
       });
 

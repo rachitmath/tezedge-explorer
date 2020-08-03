@@ -14,7 +14,7 @@
 .close button {
     font-weight: 400;
     padding: 8px;
-    color: #f6f9fc;
+    color: rgba(240, 243, 247, 0.6);
 }
 
 .close button mat-icon {
@@ -32,7 +32,7 @@
     text-align: center;
     justify-content: center;
     text-transform: uppercase;
-    color: #f6f9fc;
+    color: rgba(240, 243, 247, 0.6);
 }
 
 .stepper mat-card {
@@ -43,9 +43,21 @@
     background-color: transparent;
 }
 
+.stepper mat-card mat-horizontal-stepper button {
+    background: #204e8a;
+    border-radius: 4px;
+    color: #fff;
+    width: 109px;
+    margin-top: 20px;
+}
+
+::ng-deep .mat-stepper-horizontal-line {
+    border-top-color: rgba(240, 243, 247, 0.6);
+}
+
 ::ng-deep .mat-step-header .mat-step-label,
 ::ng-deep .mat-step-header .mat-step-label.mat-step-label-active {
-    color: #f6f9fc;
+    color: rgba(240, 243, 247, 0.6);
 }
 
 ::ng-deep .mat-step-header .mat-step-icon {
