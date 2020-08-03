@@ -25,14 +25,14 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              { 
-                "input": "src/styles.light.scss", 
+              {
+                "input": "src/styles.light.scss",
                 "bundleName": "styles.light",
                 "lazy": true,
                 "inject": false
               },
-              { 
-                "input": "src/styles.dark.scss", 
+              {
+                "input": "src/styles.dark.scss",
                 "bundleName": "styles.dark",
                 "lazy": true,
                 "inject": false
@@ -134,14 +134,14 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              { 
-                "input": "src/styles.light.scss", 
+              {
+                "input": "src/styles.light.scss",
                 "bundleName": "styles.light",
                 "lazy": true,
                 "inject": false
               },
-              { 
-                "input": "src/styles.dark.scss", 
+              {
+                "input": "src/styles.dark.scss",
                 "bundleName": "styles.dark",
                 "lazy": true,
                 "inject": false
@@ -183,5 +183,8 @@
     "@schematics/angular:component": {
       "styleext": "scss"
     }
+  },
+  "cli": {
+    "analytics": "5a439ebc-01e8-491b-8b8a-12194eab559e"
   }
 }

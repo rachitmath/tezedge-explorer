@@ -1,0 +1,13 @@
+.chain-message-card {
+    color: #f0f3f7;
+    background-color: #2f3848;
+    border: 1px solid #434b5b;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin: 10px;
+    width: 720px;
+
+    .chain-card-title mat-panel-title {
+        color: #f6f9fc;
+    }
+}

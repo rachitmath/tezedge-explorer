@@ -1,0 +1,44 @@
+<div class="header">
+
+    <span class="filler-content"></span>
+
+    <div class="close">
+        <button mat-button routerLink="/monitoring">
+            <mat-icon>close</mat-icon>
+            Close
+        </button>
+    </div>
+
+</div>
+
+<div class="stepper">
+    <mat-card>
+        <mat-card-content>
+            <mat-card-header>
+                <h2 class="mat-h1 reset">
+                    New Chain Config
+                </h2>
+            </mat-card-header>
+            <mat-horizontal-stepper [linear]="true" #stepper>
+                <mat-step [editable]="false" [optional]="false" [completed]="true" label="Server">
+                    <app-chain-server></app-chain-server>
+                </mat-step>
+
+                <mat-step [editable]="false" [optional]="false" label="Chain">
+                </mat-step>
+
+                <mat-step [editable]="false" optional="false" label="Wallets">
+                </mat-step>
+
+                <mat-step [editable]="false" optional="false" label="Baking">
+                </mat-step>
+
+                <mat-step [editable]="false" optional="false" label="Other">
+                </mat-step>
+
+                <mat-step [editable]="false" optional="false" label="Finish">
+                </mat-step>
+            </mat-horizontal-stepper>
+        </mat-card-content>
+    </mat-card>
+</div>

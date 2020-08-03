@@ -1,0 +1,57 @@
+// close button for stepper
+.header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    flex-direction: row-reverse;
+}
+
+.close {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close button {
+    font-weight: 400;
+    padding: 8px;
+    color: #f6f9fc;
+}
+
+.close button mat-icon {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.stepper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stepper mat-card-header {
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: #f6f9fc;
+}
+
+.stepper mat-card {
+    background-color: transparent;
+}
+
+.stepper mat-card mat-horizontal-stepper {
+    background-color: transparent;
+}
+
+::ng-deep .mat-step-header .mat-step-label,
+::ng-deep .mat-step-header .mat-step-label.mat-step-label-active {
+    color: #f6f9fc;
+}
+
+::ng-deep .mat-step-header .mat-step-icon {
+    background-color: #353539;
+}
+
+::ng-deep .mat-step-header .mat-step-icon-selected {
+    background: #204e8a;
+}

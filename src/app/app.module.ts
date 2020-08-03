@@ -42,9 +42,9 @@ import { NetworkComponent } from './network/network.component';
 import { NetworkPeersComponent } from './network/network-peers/network-peers.component';
 
 
-import { MatAutocompleteModule } from '@angular/material/autocomplete'; 
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
-import { MatButtonToggleModule  } from '@angular/material/button-toggle';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -74,7 +74,6 @@ import { StorageComponent } from './storage/storage.component';
 import { StorageBlockComponent } from './storage/storage-block/storage-block.component';
 import { StorageActionComponent } from './storage/storage-action/storage-action.component';
 import { StorageSearchComponent } from './storage/storage-search/storage-search.component';
-import { SvgIconComponent } from './shared/svg-icon/svg-icon.component';
 import { NetworkActionComponent } from './network/network-action/network-action.component';
 import { NetworkSearchComponent } from './network/network-search/network-search.component';
 import { NetworkActionDetailComponent } from './network/network-action-detail/network-action-detail.component';
@@ -89,6 +88,15 @@ import { SettingsNodeComponent } from './settings/settings-node/settings-node.co
 import { LogsActionComponent } from './logs/logs-action/logs-action.component';
 import { LogsSearchComponent } from './logs/logs-search/logs-search.component';
 import { LogsComponent } from './logs/logs.component';
+import { ChainComponent } from './chain/chain.component';
+import { ChainServerComponent } from './chain/chain-server/chain-server.component';
+import { ChainSetupComponent } from './chain/chain-setup/chain-setup.component';
+import { ChainWalletsComponent } from './chain/chain-wallets/chain-wallets.component';
+import { ChainBakingComponent } from './chain/chain-baking/chain-baking.component';
+import { ChainOtherComponent } from './chain/chain-other/chain-other.component';
+import { ChainFinishComponent } from './chain/chain-finish/chain-finish.component';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { SvgIconComponent } from './shared/svg-icon/svg-icon.component';
 
 
 @NgModule({
@@ -102,10 +110,10 @@ import { LogsComponent } from './logs/logs.component';
     NetworkEndpointComponent,
     BandwidthPipe,
     StorageComponent,
+    SvgIconComponent,
     StorageBlockComponent,
     StorageActionComponent,
     StorageSearchComponent,
-    SvgIconComponent,
     NetworkActionComponent,
     NetworkSearchComponent,
     NetworkActionDetailComponent,
@@ -158,6 +166,8 @@ import { LogsComponent } from './logs/logs.component';
       SettingsEffects,
       SettingsNodeEffects,
     ]),
+    // Connects RouterModule with StoreModule
+    StoreRouterConnectingModule.forRoot(),
 
     // https://github.com/zalmoxisus/redux-devtools-extension
     !environment.production ? StoreDevtoolsModule.instrument({ maxAge: 50 }) : [],
@@ -199,8 +209,7 @@ import { LogsComponent } from './logs/logs.component';
     ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
 
-    NgxJsonViewerModule,
-
+    NgxJsonViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

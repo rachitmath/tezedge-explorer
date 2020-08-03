@@ -1,9 +1,11 @@
 import { Injectable, NgZone } from '@angular/core';
 import { Effect, Actions, ofType } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
-import { tap, map, switchMap,  withLatestFrom } from 'rxjs/operators';
+import { tap, map, switchMap, withLatestFrom, catchError } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { ofRoute } from './shared/utils/rxjs/operators';
+import { ROUTER_NAVIGATION } from '@ngrx/router-store';
 
 @Injectable()
 export class AppEffects {
@@ -65,6 +67,17 @@ export class AppEffects {
             return appFeaturesActions;
         })
     );
+
+    // trigger layout  change  
+    @Effect()
+    TezosShowSidenavEffects = this.actions$.pipe(
+        ofType(ROUTER_NAVIGATION),
+        map(() => ({ type: 'APP_SIDENAV_SHOW' })),
+        catchError((error, caught) => {
+            console.error(error.message);
+            return caught;
+        }),
+    )
 
     constructor(
         private actions$: Actions,

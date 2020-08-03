@@ -157,6 +157,33 @@ export function reducer(state = initialState, action) {
             };
         }
 
+        case 'APP_SIDENAV_SHOW': {
+            return {
+                ...state,
+                sidenav: {
+                    isVisible: true,
+                    mode: 'side',
+                    backgroundColor: '#2E3748',
+                    color: '#F6F9FC',
+                    toggleButton: {
+                        isVisible: false,
+                    },
+                }
+            };
+        }
+
+        case 'APP_SIDENAV_HIDE': {
+            return {
+                ...state,
+                sidenav: {
+                    isVisible: false,
+                    toggleButton: {
+                        isVisible: false,
+                    },
+                }
+            };
+        }
+
         default:
             return state;
 
