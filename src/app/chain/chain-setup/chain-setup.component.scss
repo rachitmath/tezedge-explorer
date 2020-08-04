@@ -1,0 +1,141 @@
+.chain-row {
+    .chain-message-card {
+        color: rgba(240, 243, 247, 0.6);
+        background-color: transparent;
+        border: 1px solid #434b5b;
+        box-sizing: border-box;
+        border-radius: 4px;
+        margin: 10px;
+        width: 720px;
+
+        mat-expansion-panel-header {
+            border-bottom: 1px solid #434b5b;
+        }
+
+        .chain-card-title mat-panel-title {
+            color: rgba(240, 243, 247, 0.6);
+            justify-content: space-between;
+        }
+
+        .chain-card-content .chain-link a {
+            color: rgba(240, 243, 247, 0.4);
+            padding: 0;
+        }
+    }
+
+    .chain-form {
+        color: rgba(240, 243, 247, 0.6);
+        background-color: transparent;
+        border: 1px solid #434b5b;
+        box-sizing: border-box;
+        border-radius: 4px;
+        margin: 10px;
+        width: 720px;
+
+        .chain-basic {
+            padding: 0 24px;
+
+            .chain-basic-title {
+                color: #ffffff;
+            }
+
+            .chain-basic-desc {
+                color: rgba(240, 243, 247, 0.6);
+            }
+
+            .chain-form-row {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                mat-form-field {
+                    background: #3f3f43;
+                    border-radius: 4px;
+                    width: 40px;
+                    height: 40px;
+                    color: #ffffff;
+                    margin-right: 20px;
+                }
+
+                .chain-form-desc {
+                    width: 75%;
+                }
+            }
+        }
+
+        .chain-advance {
+            mat-expansion-panel {
+                background-color: transparent;
+                border-bottom: 1px solid #434b5b;
+
+                mat-panel-title {
+                    color: #ffffff;
+                }
+
+                .chain-advance-content {
+                    .chain-advance-desc {
+                        color: rgba(240, 243, 247, 0.6);
+                    }
+
+                    .chain-form-group {
+                        .chain-advance-title {
+                            color: #ffffff;
+                            margin-bottom: 0;
+                        }
+
+                        .chain-form-row {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+
+                            mat-form-field {
+                                background: #3f3f43;
+                                border-radius: 4px;
+                                width: 40px;
+                                height: 40px;
+                                color: #ffffff;
+                                margin-right: 20px;
+                            }
+
+                            mat-form-field.lg-form {
+                                width: 81px;
+                            }
+
+                            .chain-form-desc {
+                                width: 75%;
+                                color: rgba(240, 243, 247, 0.6);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+::ng-deep .mat-tab-label.mat-tab-label-active {
+    color: #ffff;
+}
+
+::ng-deep .mat-tab-label {
+    color: rgba(240, 243, 247, 0.6);
+}
+
+::ng-deep mat-tab-group mat-tab-header {
+    border-bottom: 1px solid #434b5b !important;
+    padding: 0 10px;
+}
+
+::ng-deep .chain-basic input.mat-input-element,
+::ng-deep .chain-advance input.mat-input-element {
+    margin-top: 2px;
+    text-align: center;
+}
+
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar {
+    background-color: #ffffff;
+}
+
+::ng-deep .mat-expansion-indicator::after {
+    color: #ffffff;
+}

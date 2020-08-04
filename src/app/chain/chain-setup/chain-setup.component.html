@@ -1,1 +1,166 @@
-<p>chain-setup works!</p>
+<div class="chain">
+    <div class="chain-row">
+        <mat-expansion-panel class="chain-message-card" hideToggle [expanded]="true">
+            <mat-expansion-panel-header class="chain-card-title">
+                <mat-panel-title>
+                    <span>
+                        <img style="margin-right: 7px;" src="../../../assets/icon/question-circle.svg">
+                        Chain setup details
+                    </span>
+                    <span>Hide</span>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="chain-card-content">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi rem iste recusandae voluptate,
+                    maiores explicabo amet sit dolorum ullam veritatis nemo consequatur officia. Quisquam vitae fugit
+                    debitis exercitationem doloribus totam?</p>
+                <div class="chain-link">
+                    <a mat-button href="https://www.google.com/" target="_blank">
+                        <img style="margin-right: 7px;" src="../../../assets/icon/external-link-alt.svg">
+                        Open Documentation
+                    </a>
+                </div>
+            </div>
+        </mat-expansion-panel>
+
+        <div class="chain-form">
+            <mat-tab-group>
+                <mat-tab label="BASIC">
+                    <div class="chain-basic">
+                        <p class="chain-basic-title">CHAIN</p>
+                        <p class="chain-basic-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat
+                            perferendis officiis aperiam quod animi blanditiis labore beatae atque laboriosam aspernatur
+                            cum, fugit voluptatem aut fuga id sed nisi suscipit odit?</p>
+                        <p class="chain-basic-title">Proof of work NONCE size</p>
+                        <form action="">
+                            <div class="chain-form-row">
+                                <mat-form-field appearance="fill">
+                                    <input matInput type="text" value="8">
+                                </mat-form-field>
+                                <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                    elit. Quaerat perferendis officiis</p>
+                            </div>
+                            <div class="chain-form-row">
+                                <mat-form-field appearance="fill">
+                                    <input matInput type="text" value="...">
+                                </mat-form-field>
+                                <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                    elit. Quaerat perferendis officiis</p>
+                            </div>
+                        </form>
+                    </div>
+                </mat-tab>
+                <mat-tab label="ADVANCE">
+                    <div class="chain-advance">
+                        <mat-expansion-panel class="chain-advance-card">
+                            <mat-expansion-panel-header class="chain-advance-title">
+                                <mat-panel-title>
+                                    CHAIN
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="chain-advance-content">
+                                <p class="chain-advance-desc">Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit.
+                                    Quaerat
+                                    perferendis officiis aperiam quod animi blanditiis labore beatae atque
+                                    laboriosam
+                                    aspernatur
+                                    cum, fugit voluptatem aut fuga id sed nisi suscipit odit?</p>
+                                <form action="">
+                                    <div class="chain-form-group">
+                                        <p class="chain-advance-title">Proof of work NONCE size</p>
+                                        <div class="chain-form-row">
+                                            <mat-form-field appearance="fill">
+                                                <input matInput type="text" value="8">
+                                            </mat-form-field>
+                                            <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur
+                                                adipisicing elit. Quaerat perferendis officiis</p>
+                                        </div>
+                                    </div>
+                                    <div class="chain-form-group">
+                                        <p class="chain-advance-title">NONCE length</p>
+                                        <div class="chain-form-row">
+                                            <mat-form-field appearance="fill">
+                                                <input matInput type="text" value="32">
+                                            </mat-form-field>
+                                            <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur
+                                                adipisicing elit. Quaerat perferendis officiis</p>
+                                        </div>
+                                    </div>
+                                    <div class="chain-form-group">
+                                        <p class="chain-advance-title">Max revelations per block</p>
+                                        <div class="chain-form-row">
+                                            <mat-form-field appearance="fill">
+                                                <input matInput type="text" value="32">
+                                            </mat-form-field>
+                                            <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur
+                                                adipisicing elit. Quaerat perferendis officiis</p>
+                                        </div>
+                                    </div>
+                                    <div class="chain-form-group">
+                                        <p class="chain-advance-title">Max operations per block</p>
+                                        <div class="chain-form-row">
+                                            <mat-form-field appearance="fill" class="lg-form">
+                                                <input matInput type="text" value="16384">
+                                            </mat-form-field>
+                                            <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur
+                                                adipisicing elit. Quaerat perferendis officiisipsum dolor, sit
+                                                amet
+                                                consectetur adipisicing elit. Quaerat perferendis officiis</p>
+                                        </div>
+                                    </div>
+                                    <div class="chain-form-group">
+                                        <p class="chain-advance-title">Preserved cycles</p>
+                                        <div class="chain-form-row">
+                                            <mat-form-field appearance="fill">
+                                                <input matInput type="text" value="5">
+                                            </mat-form-field>
+                                            <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur
+                                                adipisicing elit. Quaerat perferendis officiis</p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel class="chain-advance-card">
+                            <mat-expansion-panel-header class="chain-advance-title">
+                                <mat-panel-title>
+                                    BLOCKS
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                        </mat-expansion-panel>
+
+
+                        <mat-expansion-panel class="chain-advance-card">
+                            <mat-expansion-panel-header class="chain-advance-title">
+                                <mat-panel-title>
+                                    SMART CONTRACT (GAS)
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                        </mat-expansion-panel>
+
+
+                        <mat-expansion-panel class="chain-advance-card">
+                            <mat-expansion-panel-header class="chain-advance-title">
+                                <mat-panel-title>
+                                    BAKING
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                        </mat-expansion-panel>
+
+
+                        <mat-expansion-panel class="chain-advance-card">
+                            <mat-expansion-panel-header class="chain-advance-title">
+                                <mat-panel-title>
+                                    GOVERNANCE
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                        </mat-expansion-panel>
+
+                    </div>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+</div>
