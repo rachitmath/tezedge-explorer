@@ -39,6 +39,12 @@
                 </mat-step>
 
                 <mat-step [editable]="false" optional="false" label="Wallets">
+                    <app-chain-wallets></app-chain-wallets>
+
+                    <button mat-button matStepperNext>
+                        Continue
+                        <img style="margin-left: 7px;" src="../../assets/icon/arrow-right.svg">
+                    </button>
                 </mat-step>
 
                 <mat-step [editable]="false" optional="false" label="Baking">

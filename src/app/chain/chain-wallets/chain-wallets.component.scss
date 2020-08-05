@@ -1,0 +1,99 @@
+.chain-row {
+    .chain-message-card {
+        color: rgba(240, 243, 247, 0.6);
+        background-color: transparent;
+        border: 1px solid #434b5b;
+        box-sizing: border-box;
+        border-radius: 4px;
+        margin: 10px;
+        width: 720px;
+
+        mat-expansion-panel-header {
+            border-bottom: 1px solid #434b5b;
+        }
+
+        .chain-card-title mat-panel-title {
+            color: rgba(240, 243, 247, 0.6);
+            justify-content: space-between;
+        }
+
+        .chain-card-content .chain-link a {
+            color: rgba(240, 243, 247, 0.4);
+            padding: 0;
+        }
+    }
+
+    .chain-form {
+        color: rgba(240, 243, 247, 0.6);
+        background-color: transparent;
+        border: 1px solid #434b5b;
+        box-sizing: border-box;
+        border-radius: 4px;
+        margin: 10px;
+        width: 720px;
+
+        mat-tab-group {
+            mat-tab {
+                .chain-wallets {
+                    img.icon {
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+        .chain-bakers {
+            .no-content {
+                min-height: 285px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .chain-bakers-desc {
+                    color: rgba(240, 243, 247, 0.6);
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+::ng-deep .mat-tab-label.mat-tab-label-active {
+    color: #ffff;
+}
+
+::ng-deep .mat-tab-label {
+    color: rgba(240, 243, 247, 0.6);
+}
+
+::ng-deep mat-tab-group mat-tab-header {
+    border-bottom: 1px solid #434b5b !important;
+    padding: 10px 10px 0;
+    height: 45px;
+}
+
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar {
+    background-color: #ffffff;
+}
+
+::ng-deep .mat-expansion-indicator::after {
+    color: #ffffff;
+}
+
+::ng-deep .mat-row:nth-child(even) {
+    background-color: #2a2a2e;
+}
+
+::ng-deep .mat-row:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+::ng-deep .mat-tab-label.mat-tab-disabled {
+    position: absolute;
+    right: 0;
+}
+
+::ng-deep .mat-raised-button {
+    text-align: center;
+    background-color: #353539;
+    color: #f6f9fc;
+}

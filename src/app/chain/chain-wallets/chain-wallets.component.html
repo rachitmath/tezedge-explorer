@@ -1,1 +1,69 @@
-<p>chain-wallets works!</p>
+<div class="chain">
+    <div class="chain-row">
+        <mat-expansion-panel class="chain-message-card" hideToggle [expanded]="true">
+            <mat-expansion-panel-header class="chain-card-title">
+                <mat-panel-title>
+                    <span>
+                        <img style="margin-right: 7px;" src="../../../assets/icon/question-circle.svg">
+                        Wallet setup details
+                    </span>
+                    <span>Hide</span>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="chain-card-content">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi rem iste recusandae voluptate,
+                    maiores explicabo amet sit dolorum ullam veritatis nemo consequatur officia. Quisquam vitae fugit
+                    debitis exercitationem doloribus totam?</p>
+                <div class="chain-link">
+                    <a mat-button href="https://www.google.com/" target="_blank">
+                        <img style="margin-right: 7px;" src="../../../assets/icon/external-link-alt.svg">
+                        Open Documentation
+                    </a>
+                </div>
+            </div>
+        </mat-expansion-panel>
+
+        <div class="chain-form">
+            <mat-tab-group>
+                <mat-tab label="WALLETS (10)">
+                    <div class="chain-wallets">
+                        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                            <ng-container matColumnDef="Address">
+                                <th mat-header-cell *matHeaderCellDef>
+                                    ADDRESS
+                                    <img class="icon" src="../../../assets/icon/question-circle.svg">
+                                </th>
+                                <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="Balance">
+                                <th mat-header-cell *matHeaderCellDef>
+                                    BALANCE
+                                    <img class="icon" src="../../../assets/icon/question-circle.svg">
+                                </th>
+                                <td mat-cell *matCellDef="let element"> {{element.balance}} </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>
+                    </div>
+                </mat-tab>
+                <mat-tab label="BAKERS (0)">
+                    <div class="chain-bakers">
+                        <div class="no-content">
+                            <p class="chain-bakers-desc">There are no wallets with backing rights, you can manually add
+                                one</p>
+                        </div>
+                    </div>
+                </mat-tab>
+                <mat-tab disabled>
+                    <ng-template mat-tab-label>
+                        <button mat-raised-button>ADD WALLET</button>
+                    </ng-template>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+</div>
