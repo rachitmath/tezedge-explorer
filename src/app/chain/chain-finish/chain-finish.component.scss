@@ -1,0 +1,72 @@
+.chain-row {
+    .chain-message-card {
+        color: rgba(240, 243, 247, 0.6);
+        background-color: rgba(237, 38, 85, 0.5);
+        border: 1px solid #434b5b;
+        box-sizing: border-box;
+        border-radius: 4px;
+        margin: 10px;
+        width: 720px;
+
+        mat-expansion-panel-header {
+            border-bottom: 1px solid #434b5b;
+        }
+
+        .chain-card-title mat-panel-title {
+            color: rgba(240, 243, 247, 0.6);
+            justify-content: space-between;
+        }
+
+        .chain-card-content .chain-link a {
+            color: rgba(240, 243, 247, 0.4);
+            padding: 0;
+        }
+
+        button {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+    }
+
+    .chain-form {
+        padding: 0 10px;
+        margin-top: 40px;
+
+        .chain-form-group {
+            width: 720px;
+            color: #ffffff;
+            margin: 20px 0;
+
+            .chain-form-title {
+                color: #ffffff;
+            }
+
+            .chain-form-desc {
+                color: rgba(240, 243, 247, 0.4);
+            }
+        }
+
+        mat-form-field {
+            background: #3f3f43;
+            border-radius: 4px;
+            width: 320px;
+            color: #ffffff;
+        }
+    }
+}
+
+::ng-deep .mat-slide-toggle-bar {
+    background: #3f3f43;
+}
+
+::ng-deep .mat-slide-toggle-thumb {
+    background: #555558;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    background: #3f3f43;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    background: #ffffff;
+}

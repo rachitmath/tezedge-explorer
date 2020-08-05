@@ -1,0 +1,62 @@
+.chain-row {
+    .chain-message-card {
+        color: rgba(240, 243, 247, 0.6);
+        background-color: transparent;
+        border: 1px solid #434b5b;
+        box-sizing: border-box;
+        border-radius: 4px;
+        margin: 10px;
+        width: 720px;
+
+        mat-expansion-panel-header {
+            border-bottom: 1px solid #434b5b;
+        }
+
+        .chain-card-title mat-panel-title {
+            color: rgba(240, 243, 247, 0.6);
+            justify-content: space-between;
+        }
+
+        .chain-card-content .chain-link a {
+            color: rgba(240, 243, 247, 0.4);
+            padding: 0;
+        }
+    }
+
+    .chain-form {
+        width: 720px;
+
+        .chain-basic {
+            padding: 30px 24px;
+
+            .chain-basic-title {
+                color: #ffffff;
+                margin: 0;
+            }
+
+            .chain-basic-desc {
+                color: rgba(240, 243, 247, 0.6);
+            }
+
+            .chain-form-row {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                mat-form-field {
+                    background: #3f3f43;
+                    border-radius: 4px;
+                    width: 40px;
+                    height: 40px;
+                    color: #ffffff;
+                    margin-right: 20px;
+                }
+
+                .chain-form-desc {
+                    width: 75%;
+                    color: rgba(240, 243, 247, 0.6);
+                }
+            }
+        }
+    }
+}

@@ -11,10 +11,17 @@
     justify-content: flex-end;
 }
 
+.upload-config button {
+    color: rgba(240, 243, 247, 0.6);
+    background-color: #353539;
+    margin-right: 15px;
+}
+
 .close button {
     font-weight: 400;
-    padding: 8px;
     color: rgba(240, 243, 247, 0.6);
+    background-color: #353539;
+    margin-right: 15px;
 }
 
 .close button mat-icon {

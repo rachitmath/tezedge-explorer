@@ -4,8 +4,14 @@
 
     <div class="close">
         <button mat-button routerLink="/monitoring">
-            <mat-icon>close</mat-icon>
             Close
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+    <div class="upload-config">
+        <button mat-button routerLink="">
+            <img style="margin-right: 7px;" src="../../assets/icon/upload-file.svg">
+            UPLOAD CONFIG FILE
         </button>
     </div>
 
@@ -48,14 +54,33 @@
                 </mat-step>
 
                 <mat-step [editable]="false" optional="false" label="Baking">
+                    <app-chain-baking></app-chain-baking>
+
+                    <button mat-button matStepperNext>
+                        Continue
+                        <img style="margin-left: 7px;" src="../../assets/icon/arrow-right.svg">
+                    </button>
                 </mat-step>
 
                 <mat-step [editable]="false" optional="false" label="Other">
+                    <app-chain-other></app-chain-other>
+
+                    <button mat-button matStepperNext>
+                        Continue
+                        <img style="margin-left: 7px;" src="../../assets/icon/arrow-right.svg">
+                    </button>
                 </mat-step>
 
                 <mat-step [editable]="false" optional="false" label="Finish">
+                    <app-chain-finish></app-chain-finish>
+
+                    <button mat-button matStepperNext>
+                        <img style="margin-right: 7px;" src="../../assets/icon/check.svg">
+                        Finish
+                    </button>
                 </mat-step>
             </mat-horizontal-stepper>
+
         </mat-card-content>
     </mat-card>
 </div>
