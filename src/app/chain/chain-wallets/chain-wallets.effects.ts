@@ -25,9 +25,21 @@ export class ChainWalletEffects {
 
         switchMap(() => {
             return this.http.get('../../../assets/006-carthage-protocol-parameters.json').pipe(
-                map(response => ({ type: 'CHAIN_WALLET_START_SUCCESS', payload: response })),
+                map((response: any) => ({ type: 'CHAIN_WALLET_START_SUCCESS', payload: response.bootstrap_accounts })),
                 catchError(error => of({ type: 'CHAIN_WALLET_START_ERROR', payload: error })),
             );
         }),
     );
+
+    // stop chain wallet action download
+    @Effect({ dispatch: false })
+    EndpointsActionStopEffect$ = this.actions$.pipe(
+        ofType('CHAIN_WALLET_STOP'),
+        // merge state
+        withLatestFrom(this.store, (action: any, state) => ({ action, state })),
+        // init app modules
+        tap(({ action, state }) => {
+            chainWalletDestroy$.next();
+        }),
+    )
 }

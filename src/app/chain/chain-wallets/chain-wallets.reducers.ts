@@ -14,5 +14,13 @@ export function reducer(state = initialState, action) {
                 stream: true,
             };
         }
+        case 'CHAIN_WALLET_STOP': {
+            return {
+                ...state,
+                stream: false
+            };
+        }
+        default:
+            return state;
     }
 }
