@@ -51,6 +51,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ChainWalletEffects } from './chain-wallets/chain-wallets.effects';
 
 @NgModule({
   declarations: [
@@ -105,6 +106,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatTreeModule,
     EffectsModule.forFeature([
       ChainEffects,
+      ChainWalletEffects
     ]),
     FormsModule
   ]
