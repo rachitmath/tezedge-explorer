@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-chain-setup',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChainSetupComponent implements OnInit {
 
-  constructor() { }
+  public onDestroy$ = new Subject();
+
+  constructor(
+    public store: Store<any>,
+  ) { }
 
   ngOnInit(): void {
+    this.store.dispatch({
+      type: 'CHAIN_SETUP_LOAD',
+      payload: '',
+    });
+
+    this.store.select('chainSetupAction')
+      .pipe(takeUntil(this.onDestroy$))
+      .subscribe((data) => {
+        console.log(data);
+      });
   }
 
 }

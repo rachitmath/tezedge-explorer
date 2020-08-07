@@ -49,9 +49,10 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ChainWalletEffects } from './chain-wallets/chain-wallets.effects';
+import { ChainSetupEffects } from './chain-setup/chain-setup.effects';
 
 @NgModule({
   declarations: [
@@ -106,9 +107,11 @@ import { ChainWalletEffects } from './chain-wallets/chain-wallets.effects';
     MatTreeModule,
     EffectsModule.forFeature([
       ChainEffects,
-      ChainWalletEffects
+      ChainWalletEffects,
+      ChainSetupEffects
     ]),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class ChainModule { }

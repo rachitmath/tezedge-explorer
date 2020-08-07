@@ -34,6 +34,7 @@ import * as fromLogsAction from './logs/logs-action/logs-action.reducer';
 import * as fromStorageBlock from './storage/storage-block/storage-block.reducer';
 import * as fromStorageAction from './storage/storage-action/storage-action.reducer';
 import * as fromChainWalletReducer from './chain/chain-wallets/chain-wallets.reducers';
+import * as fromChainSetupReducer from './chain/chain-setup/chain-setup.reducers';
 
 // state interface
 export interface State {
@@ -53,6 +54,7 @@ export interface State {
     storageAction: any;
     routerReducer: fromRouter.RouterReducerState<RouterStateUrl>;
     chainWalletAction: any;
+    chainSetupAction: any;
 }
 
 // state
@@ -73,6 +75,7 @@ export const reducers: ActionReducerMap<State> = {
     storageAction: fromStorageAction.reducer,
     routerReducer: fromRouter.routerReducer,
     chainWalletAction: fromChainWalletReducer.reducer,
+    chainSetupAction: fromChainSetupReducer.reducer
 };
 
 // // log all actions to console for production
