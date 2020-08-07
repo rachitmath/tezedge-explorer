@@ -33,7 +33,7 @@ export class ChainWalletEffects {
 
     // stop chain wallet action download
     @Effect({ dispatch: false })
-    EndpointsActionStopEffect$ = this.actions$.pipe(
+    ChainWalletStopEffect$ = this.actions$.pipe(
         ofType('CHAIN_WALLET_STOP'),
         // merge state
         withLatestFrom(this.store, (action: any, state) => ({ action, state })),
@@ -41,5 +41,5 @@ export class ChainWalletEffects {
         tap(({ action, state }) => {
             chainWalletDestroy$.next();
         }),
-    )
+    );
 }

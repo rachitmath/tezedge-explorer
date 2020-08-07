@@ -5,7 +5,7 @@ import { Store } from '@ngrx/store';
 import { map, switchMap, withLatestFrom, catchError, tap, takeUntil } from 'rxjs/operators';
 import { of, Subject, empty, timer } from 'rxjs';
 
-const chainWalletDestroy$ = new Subject();
+const chainSetupDestroy$ = new Subject();
 
 @Injectable()
 export class ChainSetupEffects {
@@ -17,7 +17,7 @@ export class ChainSetupEffects {
     ) { }
 
     @Effect()
-    ChainWalletLoad$ = this.actions$.pipe(
+    ChainSetupLoad$ = this.actions$.pipe(
         ofType('CHAIN_SETUP_LOAD'),
 
         // merge state
@@ -33,13 +33,13 @@ export class ChainSetupEffects {
 
     // stop chain setup action download
     @Effect({ dispatch: false })
-    EndpointsActionStopEffect$ = this.actions$.pipe(
+    ChainSetupStopEffect$ = this.actions$.pipe(
         ofType('CHAIN_SETUP_STOP'),
         // merge state
         withLatestFrom(this.store, (action: any, state) => ({ action, state })),
         // init app modules
         tap(({ action, state }) => {
-            chainWalletDestroy$.next();
+            chainSetupDestroy$.next();
         }),
-    )
+    );
 }
