@@ -28,11 +28,11 @@
 
             <mat-horizontal-stepper [linear]="false" #stepper>
 
-                <mat-step [editable]="false" [optional]="false" [completed]="true" label="Server">
+                <mat-step [editable]="true" [optional]="false" [completed]="true" label="Server">
                     <app-chain-server></app-chain-server>
                 </mat-step>
 
-                <mat-step [editable]="false" [optional]="false" label="Chain">
+                <mat-step [editable]="true" [optional]="false" label="Chain">
                     <button mat-button matStepperPrevious class="back-btn">
                         <img style="margin-right: 7px;" src="../../assets/icon/arrow-left.svg">
                         Back
@@ -40,7 +40,7 @@
                     <app-chain-setup></app-chain-setup>
                 </mat-step>
 
-                <mat-step [editable]="false" optional="false" label="Wallets">
+                <mat-step [editable]="true" optional="false" label="Wallets">
                     <button mat-button matStepperPrevious class="back-btn">
                         <img style="margin-right: 7px;" src="../../assets/icon/arrow-left.svg">
                         Back
@@ -53,7 +53,7 @@
                     </button>
                 </mat-step>
 
-                <mat-step [editable]="false" optional="false" label="Baking">
+                <mat-step [editable]="true" optional="false" label="Baking">
                     <button mat-button matStepperPrevious class="back-btn">
                         <img style="margin-right: 7px;" src="../../assets/icon/arrow-left.svg">
                         Back
@@ -66,7 +66,7 @@
                     </button>
                 </mat-step>
 
-                <mat-step [editable]="false" optional="false" label="Other">
+                <mat-step [editable]="true" optional="false" label="Other">
                     <button mat-button matStepperPrevious class="back-btn">
                         <img style="margin-right: 7px;" src="../../assets/icon/arrow-left.svg">
                         Back
@@ -79,7 +79,7 @@
                     </button>
                 </mat-step>
 
-                <mat-step [editable]="false" optional="false" label="Finish">
+                <mat-step [editable]="true" optional="false" label="Finish">
                     <button mat-button matStepperPrevious class="back-btn">
                         <img style="margin-right: 7px;" src="../../assets/icon/arrow-left.svg">
                         Back

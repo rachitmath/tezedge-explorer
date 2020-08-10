@@ -47,7 +47,7 @@ export class NgrxFormDirective implements OnInit, OnDestroy {
       .subscribe(state => {
         // update form form with redux data
         if (state) {
-          console.log('[ngrx-from] state:  ', state.form);
+          // console.log('[ngrx-from] state:  ', state.form);
           this.formGroupDirective.form.patchValue({ ...state.form }, { emitEvent: false });
         }
 
