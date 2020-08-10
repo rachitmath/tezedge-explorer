@@ -24,80 +24,82 @@
         </mat-expansion-panel>
 
         <div class="chain-form">
-            <div class="chain-basic">
-                <div class="chain-basic-group">
-                    <p class="chain-basic-title">Conditions under which bakers can bake</p>
-                    <p class="chain-basic-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat
-                        perferendis officiis aperiam quod animi blanditiis labore beatae atque laboriosam aspernatur
-                        cum, fugit voluptatem aut fuga id sed nisi suscipit odit?</p>
-                    <div class="chain-form-group">
-                        <p class="chain-basic-title">Mempool parameters</p>
-                        <div class="chain-form-row">
-                            <mat-form-field appearance="fill">
-                                <input matInput type="text" value="8">
-                            </mat-form-field>
-                            <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur adipisicing
-                                elit. Quaerat perferendis officiis</p>
+            <form action="" [formGroup]="chainBakingForm" appNgrxForm="chain.baking">
+                <div class="chain-basic">
+                    <div class="chain-basic-group">
+                        <p class="chain-basic-title">Conditions under which bakers can bake</p>
+                        <p class="chain-basic-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat
+                            perferendis officiis aperiam quod animi blanditiis labore beatae atque laboriosam aspernatur
+                            cum, fugit voluptatem aut fuga id sed nisi suscipit odit?</p>
+                        <div class="chain-form-group">
+                            <p class="chain-basic-title">Mempool parameters</p>
+                            <div class="chain-form-row">
+                                <mat-form-field appearance="fill">
+                                    <input matInput type="text" value="8" formControlName="mempoolParameters">
+                                </mat-form-field>
+                                <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                    elit. Quaerat perferendis officiis</p>
+                            </div>
+                        </div>
+                        <div class="chain-form-group">
+                            <p class="chain-basic-title">Max numer of transaction</p>
+                            <div class="chain-form-row">
+                                <mat-form-field appearance="fill">
+                                    <input matInput type="text" value="8" formControlName="maxTransaction">
+                                </mat-form-field>
+                                <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                    elit. Quaerat perferendis officiis</p>
+                            </div>
+                        </div>
+                        <div class="chain-form-group">
+                            <p class="chain-basic-title">Size of transactions</p>
+                            <div class="chain-form-row">
+                                <mat-form-field appearance="fill">
+                                    <input matInput type="text" value="8" formControlName="transactionSize">
+                                </mat-form-field>
+                                <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                    elit. Quaerat perferendis officiis</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="chain-form-group">
-                        <p class="chain-basic-title">Max numer of transaction</p>
-                        <div class="chain-form-row">
-                            <mat-form-field appearance="fill">
-                                <input matInput type="text" value="8">
-                            </mat-form-field>
-                            <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur adipisicing
-                                elit. Quaerat perferendis officiis</p>
+                    <div class="chain-basic-group">
+                        <p class="chain-basic-title">Parameters to accept transaction</p>
+                        <p class="chain-basic-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                            veritatis et quasi architecto</p>
+                        <div class="chain-form-group">
+                            <p class="chain-basic-title">Fee</p>
+                            <div class="chain-form-row">
+                                <mat-form-field appearance="fill">
+                                    <input matInput type="text" value="8" formControlName="fee">
+                                </mat-form-field>
+                                <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                    elit. Quaerat perferendis officiis</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="chain-form-group">
-                        <p class="chain-basic-title">Size of transactions</p>
-                        <div class="chain-form-row">
-                            <mat-form-field appearance="fill">
-                                <input matInput type="text" value="8">
-                            </mat-form-field>
-                            <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur adipisicing
-                                elit. Quaerat perferendis officiis</p>
+                        <div class="chain-form-group">
+                            <p class="chain-basic-title">Max-priority</p>
+                            <div class="chain-form-row">
+                                <mat-form-field appearance="fill">
+                                    <input matInput type="text" value="8" formControlName="maxPriority">
+                                </mat-form-field>
+                                <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                    elit. Quaerat perferendis officiis</p>
+                            </div>
+                        </div>
+                        <div class="chain-form-group">
+                            <p class="chain-basic-title">...</p>
+                            <div class="chain-form-row">
+                                <mat-form-field appearance="fill">
+                                    <input matInput type="text" value="8">
+                                </mat-form-field>
+                                <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                    elit. Quaerat perferendis officiis</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="chain-basic-group">
-                    <p class="chain-basic-title">Parameters to accept transaction</p>
-                    <p class="chain-basic-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                        veritatis et quasi architecto</p>
-                    <div class="chain-form-group">
-                        <p class="chain-basic-title">Fee</p>
-                        <div class="chain-form-row">
-                            <mat-form-field appearance="fill">
-                                <input matInput type="text" value="8">
-                            </mat-form-field>
-                            <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur adipisicing
-                                elit. Quaerat perferendis officiis</p>
-                        </div>
-                    </div>
-                    <div class="chain-form-group">
-                        <p class="chain-basic-title">Max-priority</p>
-                        <div class="chain-form-row">
-                            <mat-form-field appearance="fill">
-                                <input matInput type="text" value="8">
-                            </mat-form-field>
-                            <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur adipisicing
-                                elit. Quaerat perferendis officiis</p>
-                        </div>
-                    </div>
-                    <div class="chain-form-group">
-                        <p class="chain-basic-title">...</p>
-                        <div class="chain-form-row">
-                            <mat-form-field appearance="fill">
-                                <input matInput type="text" value="8">
-                            </mat-form-field>
-                            <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur adipisicing
-                                elit. Quaerat perferendis officiis</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>

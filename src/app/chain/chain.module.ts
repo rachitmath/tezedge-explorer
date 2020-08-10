@@ -53,6 +53,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ChainWalletEffects } from './chain-wallets/chain-wallets.effects';
 import { ChainSetupEffects } from './chain-setup/chain-setup.effects';
+import { NgrxFormDirective } from '../shared/directives/ngrx-form.directive';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { ChainSetupEffects } from './chain-setup/chain-setup.effects';
     ChainWalletsComponent,
     ChainBakingComponent,
     ChainOtherComponent,
-    ChainFinishComponent
+    ChainFinishComponent,
+    NgrxFormDirective
   ],
   imports: [
     CommonModule,

@@ -24,7 +24,7 @@
         </mat-expansion-panel>
 
         <div class="chain-form">
-            <form [formGroup]="chainServerForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="chainServerForm" (ngSubmit)="onSubmit()" appNgrxForm="chain.server">
                 <div class="chain-form-group">
                     <p class="chain-form-title">HOSTNAME</p>
                     <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat

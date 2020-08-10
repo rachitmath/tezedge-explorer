@@ -58,6 +58,16 @@
     margin-top: 20px;
 }
 
+.back-btn {
+    position: absolute;
+    top: 62px;
+    left: -145px;
+    width: 65px;
+    color: rgba(240, 243, 247, 0.6) !important;
+    background-color: #353539 !important;
+    text-transform: uppercase;
+}
+
 ::ng-deep .mat-stepper-horizontal-line {
     border-top-color: rgba(240, 243, 247, 0.6);
 }

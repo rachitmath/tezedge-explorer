@@ -22,7 +22,7 @@
                 </div>
             </div>
         </mat-expansion-panel>
-        <form [formGroup]="chainSetupForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="chainSetupForm" (ngSubmit)="onSubmit()" appNgrxForm="chain.setup">
             <div class="chain-form">
 
                 <mat-tab-group>

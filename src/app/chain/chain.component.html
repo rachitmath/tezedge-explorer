@@ -25,16 +25,26 @@
                     New Chain Config
                 </h2>
             </mat-card-header>
-            <mat-horizontal-stepper [linear]="true" #stepper>
+
+            <mat-horizontal-stepper [linear]="false" #stepper>
+
                 <mat-step [editable]="false" [optional]="false" [completed]="true" label="Server">
                     <app-chain-server></app-chain-server>
                 </mat-step>
 
                 <mat-step [editable]="false" [optional]="false" label="Chain">
+                    <button mat-button matStepperPrevious class="back-btn">
+                        <img style="margin-right: 7px;" src="../../assets/icon/arrow-left.svg">
+                        Back
+                    </button>
                     <app-chain-setup></app-chain-setup>
                 </mat-step>
 
                 <mat-step [editable]="false" optional="false" label="Wallets">
+                    <button mat-button matStepperPrevious class="back-btn">
+                        <img style="margin-right: 7px;" src="../../assets/icon/arrow-left.svg">
+                        Back
+                    </button>
                     <app-chain-wallets></app-chain-wallets>
 
                     <button mat-button matStepperNext>
@@ -44,6 +54,10 @@
                 </mat-step>
 
                 <mat-step [editable]="false" optional="false" label="Baking">
+                    <button mat-button matStepperPrevious class="back-btn">
+                        <img style="margin-right: 7px;" src="../../assets/icon/arrow-left.svg">
+                        Back
+                    </button>
                     <app-chain-baking></app-chain-baking>
 
                     <button mat-button matStepperNext>
@@ -53,6 +67,10 @@
                 </mat-step>
 
                 <mat-step [editable]="false" optional="false" label="Other">
+                    <button mat-button matStepperPrevious class="back-btn">
+                        <img style="margin-right: 7px;" src="../../assets/icon/arrow-left.svg">
+                        Back
+                    </button>
                     <app-chain-other></app-chain-other>
 
                     <button mat-button matStepperNext>
@@ -62,6 +80,10 @@
                 </mat-step>
 
                 <mat-step [editable]="false" optional="false" label="Finish">
+                    <button mat-button matStepperPrevious class="back-btn">
+                        <img style="margin-right: 7px;" src="../../assets/icon/arrow-left.svg">
+                        Back
+                    </button>
                     <app-chain-finish></app-chain-finish>
 
                     <button mat-button matStepperNext>

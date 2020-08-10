@@ -35,6 +35,8 @@ import * as fromStorageBlock from './storage/storage-block/storage-block.reducer
 import * as fromStorageAction from './storage/storage-action/storage-action.reducer';
 import * as fromChainWalletReducer from './chain/chain-wallets/chain-wallets.reducers';
 import * as fromChainSetupReducer from './chain/chain-setup/chain-setup.reducers';
+import * as fromNgrxForm from './shared/directives/ngrx-form.reducers';
+
 
 // state interface
 export interface State {
@@ -86,7 +88,7 @@ export const reducers: ActionReducerMap<State> = {
 
 // compose all reducers to map
 export const metaReducers: MetaReducer<State>[] = !environment.production
-    ? []
-    : [
+    ? [fromNgrxForm.form]
+    : [fromNgrxForm.form
         //    logger
     ];
