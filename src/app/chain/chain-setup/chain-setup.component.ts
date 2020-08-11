@@ -39,7 +39,7 @@ export class ChainSetupComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this.onDestroy$))
       .subscribe((data) => {
         if (data.stream) {
-          this.setFormValue(data.entities);
+          // this.setFormValue(data.entities);
         }
       });
   }

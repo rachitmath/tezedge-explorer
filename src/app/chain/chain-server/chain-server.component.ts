@@ -29,9 +29,9 @@ export class ChainServerComponent implements OnInit {
   }
 
   onChangeHostName(event) {
-    this.chainServerForm.get('hostName').setValue(event.target.value, {
-      onlySelf: true
-    });
+    // this.chainServerForm.get('hostName').setValue(event.target.value, {
+    //   onlySelf: true
+    // });
   }
 
   onChangeAutoBake(event: MatSlideToggleChange) {
@@ -41,9 +41,9 @@ export class ChainServerComponent implements OnInit {
       this.autobakeSlideText = 'DISABLED';
     }
 
-    this.chainServerForm.get('autoBake').setValue(event.checked, {
-      onlySelf: true
-    });
+    // this.chainServerForm.get('autoBake').setValue(event.checked, {
+    //   onlySelf: true
+    // });
   }
 
   onChangeChaneId(event: MatSlideToggleChange) {
@@ -53,9 +53,9 @@ export class ChainServerComponent implements OnInit {
       this.chainIdSlideText = 'DISABLED';
     }
 
-    this.chainServerForm.get('transactionFailure').setValue(event.checked, {
-      onlySelf: true
-    });
+    // this.chainServerForm.get('transactionFailure').setValue(event.checked, {
+    //   onlySelf: true
+    // });
   }
 
   onSubmit() {

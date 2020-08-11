@@ -11,7 +11,7 @@ export class NgrxFormDirective implements OnInit, OnDestroy {
 
   // tslint:disable-next-line: no-input-rename
   @Input('appNgrxForm') path: string;
-  private destroy$ = new Subject<null>();
+  private destroy$: Subject<null> = new Subject<null>();
   private updating = false;
 
   constructor(
@@ -42,7 +42,7 @@ export class NgrxFormDirective implements OnInit, OnDestroy {
       });
 
     // listen to changes from redux and update form
-    this.store.select(this.path)
+    this.store.select(this.path) // 'chain.server'
       .pipe(takeUntil(this.destroy$))
       .subscribe(state => {
         // update form form with redux data
