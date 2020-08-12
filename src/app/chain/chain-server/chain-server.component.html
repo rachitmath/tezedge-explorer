@@ -31,9 +31,9 @@
                         perferendis officiis aperiam quod animi blanditiis labore beatae atque laboriosam aspernatur
                         cum, fugit voluptatem aut fuga id sed nisi suscipit odit?</p>
                     <mat-form-field appearance="fill">
-                        <mat-select formControlName="hostName" (change)="onChangeHostName($event)">
+                        <mat-select formControlName="hostName">
                             <mat-option value="127.0.0.1">127.0.0.1</mat-option>
-                            <mat-option value="127.0.0.1">127.0.0.1</mat-option>
+                            <mat-option value="127.0.0.2">127.0.0.2</mat-option>
                         </mat-select>
                     </mat-form-field>
                 </div>
@@ -59,16 +59,17 @@
                 <div class="chain-form-group">
                     <p class="chain-form-title">AUTOBAKE</p>
                     <p class="chain-form-desc">Lorem ipsum dolor sit amet</p>
-                    <mat-slide-toggle formControlName="autoBake" (change)="onChangeAutoBake($event)">
-                        {{autobakeSlideText}}</mat-slide-toggle>
+                    <mat-slide-toggle formControlName="autoBake">
+                        {{chainServerFormData?.autoBake ? 'ENABLED': 'DISABLED'}}
+                    </mat-slide-toggle>
                 </div>
 
                 <div class="chain-form-group">
                     <p class="chain-form-title">ERROR ON TRANSACTION FAILURE</p>
                     <p class="chain-form-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat
                         perferendis officiis aperiam quod animi</p>
-                    <mat-slide-toggle formControlName="transactionFailure" (change)="onChangeChaneId($event)"
-                        sliderChecked>{{chainIdSlideText}}
+                    <mat-slide-toggle formControlName="transactionFailure">
+                        {{chainServerFormData?.transactionFailure ? 'ENABLED': 'DISABLED'}}
                     </mat-slide-toggle>
                 </div>
 

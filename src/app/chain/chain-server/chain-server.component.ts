@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Store } from '@ngrx/store';
+import { takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-chain-server',
@@ -14,8 +17,12 @@ export class ChainServerComponent implements OnInit {
 
   public chainServerForm: FormGroup;
 
+  public onDestroy$ = new Subject();
+  public chainServerFormData;
+
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private store: Store<any>
   ) { }
 
   ngOnInit(): void {
@@ -26,36 +33,15 @@ export class ChainServerComponent implements OnInit {
       autoBake: [false, Validators.required],
       transactionFailure: [true, Validators.required]
     });
-  }
 
-  onChangeHostName(event) {
-    // this.chainServerForm.get('hostName').setValue(event.target.value, {
-    //   onlySelf: true
-    // });
-  }
-
-  onChangeAutoBake(event: MatSlideToggleChange) {
-    if (event.checked) {
-      this.autobakeSlideText = 'ENABLED';
-    } else {
-      this.autobakeSlideText = 'DISABLED';
-    }
-
-    // this.chainServerForm.get('autoBake').setValue(event.checked, {
-    //   onlySelf: true
-    // });
-  }
-
-  onChangeChaneId(event: MatSlideToggleChange) {
-    if (event.checked) {
-      this.chainIdSlideText = 'ENABLED';
-    } else {
-      this.chainIdSlideText = 'DISABLED';
-    }
-
-    // this.chainServerForm.get('transactionFailure').setValue(event.checked, {
-    //   onlySelf: true
-    // });
+    this.store.select('chain')
+      .pipe(takeUntil(this.onDestroy$))
+      .subscribe((data: any) => {
+        if (data) {
+          // tslint:disable-next-line: no-string-literal
+          this.chainServerFormData = data['server']['form'];
+        }
+      });
   }
 
   onSubmit() {

@@ -97,6 +97,8 @@ import { ChainOtherComponent } from './chain/chain-other/chain-other.component';
 import { ChainFinishComponent } from './chain/chain-finish/chain-finish.component';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { SvgIconComponent } from './shared/svg-icon/svg-icon.component';
+import { SandboxComponent } from './sandbox/sandbox.component';
+import { SandboxEffects } from './sandbox/sandbox.effects';
 
 
 @NgModule({
@@ -124,7 +126,8 @@ import { SvgIconComponent } from './shared/svg-icon/svg-icon.component';
     SettingsNodeComponent,
     LogsActionComponent,
     LogsSearchComponent,
-    LogsComponent
+    LogsComponent,
+    SandboxComponent
   ],
   imports: [
     BrowserModule,
@@ -165,6 +168,7 @@ import { SvgIconComponent } from './shared/svg-icon/svg-icon.component';
       LogsActionEffects,
       SettingsEffects,
       SettingsNodeEffects,
+      SandboxEffects
     ]),
     // Connects RouterModule with StoreModule
     StoreRouterConnectingModule.forRoot(),

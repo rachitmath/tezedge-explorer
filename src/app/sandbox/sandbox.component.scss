@@ -1,0 +1,42 @@
+mat-toolbar {
+    background: linear-gradient(90deg, #d8a871 0.17%, #8c6141 100%) !important;
+    height: 50px;
+
+    .item {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        mat-select {
+            width: 80px;
+        }
+
+        span {
+            color: #000000;
+        }
+
+        svg-icon {
+            vertical-align: top;
+        }
+    }
+
+    .item:not(:last-child) {
+        border-right: 2px solid;
+        border-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .item:not(:first-child) {
+        font-size: 16px;
+    }
+
+    .item:last-child {
+        margin-left: auto;
+        a {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+        }
+    }
+}
+
+::ng-deep .mat-toolbar .mat-select-value {
+    color: rgba(0, 0, 0, 0.6);
+}

@@ -12,7 +12,6 @@ export class NgrxFormDirective implements OnInit, OnDestroy {
   // tslint:disable-next-line: no-input-rename
   @Input('appNgrxForm') path: string;
   private destroy$: Subject<null> = new Subject<null>();
-  private updating = false;
 
   constructor(
     private store: Store<any>,
@@ -25,7 +24,6 @@ export class NgrxFormDirective implements OnInit, OnDestroy {
     this.formGroupDirective.valueChanges
       .pipe(takeUntil(this.destroy$))
       .subscribe(value => {
-        this.updating = true;
         console.log(value);
 
         this.store.dispatch({
@@ -33,8 +31,6 @@ export class NgrxFormDirective implements OnInit, OnDestroy {
           payload: {
             path: this.path,
             value,
-            // dirty: this.formGroupDirective.dirty,
-            // errors: this.formGroupDirective.errors,
           }
 
         });
@@ -45,9 +41,8 @@ export class NgrxFormDirective implements OnInit, OnDestroy {
     this.store.select(this.path) // 'chain.server'
       .pipe(takeUntil(this.destroy$))
       .subscribe(state => {
-        // update form form with redux data
         if (state) {
-          // console.log('[ngrx-from] state:  ', state.form);
+          console.log(state);
           this.formGroupDirective.form.patchValue({ ...state.form }, { emitEvent: false });
         }
 

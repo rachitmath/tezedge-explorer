@@ -36,6 +36,7 @@ import * as fromStorageAction from './storage/storage-action/storage-action.redu
 import * as fromChainWalletReducer from './chain/chain-wallets/chain-wallets.reducers';
 import * as fromChainSetupReducer from './chain/chain-setup/chain-setup.reducers';
 import * as fromNgrxForm from './shared/directives/ngrx-form.reducers';
+import * as fromSandboxReducer from './sandbox/sandbox.reducers';
 
 
 // state interface
@@ -57,6 +58,7 @@ export interface State {
     routerReducer: fromRouter.RouterReducerState<RouterStateUrl>;
     chainWalletAction: any;
     chainSetupAction: any;
+    sandboxAction: any;
 }
 
 // state
@@ -77,7 +79,8 @@ export const reducers: ActionReducerMap<State> = {
     storageAction: fromStorageAction.reducer,
     routerReducer: fromRouter.routerReducer,
     chainWalletAction: fromChainWalletReducer.reducer,
-    chainSetupAction: fromChainSetupReducer.reducer
+    chainSetupAction: fromChainSetupReducer.reducer,
+    sandboxAction: fromSandboxReducer.reducer
 };
 
 // // log all actions to console for production
