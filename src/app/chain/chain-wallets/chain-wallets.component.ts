@@ -25,18 +25,14 @@ export class ChainWalletsComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
-    this.store.dispatch({
-      type: 'CHAIN_WALLET_LOAD',
-      payload: '',
-    });
 
-    this.store.select('chainWalletAction')
-      .pipe(takeUntil(this.onDestroy$))
-      .subscribe((data) => {
-        if (data.entities.length > 0) {
-          this.dataSource = data.entities.map(rawWallet => this.mapWallet(rawWallet));
-        }
-      });
+    // this.store.select('chainWalletAction')
+    //   .pipe(takeUntil(this.onDestroy$))
+    //   .subscribe((data) => {
+    //     if (data.entities.length > 0) {
+    //       this.dataSource = data.entities.map(rawWallet => this.mapWallet(rawWallet));
+    //     }
+    //   });
   }
 
   mapWallet(rawWallet: any): Wallet {

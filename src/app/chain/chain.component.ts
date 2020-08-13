@@ -17,6 +17,12 @@ export class ChainComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
+
+
+    this.store.dispatch({
+      type: 'CHAIN_LOAD',
+      payload: '',
+    });
   }
 
   ngOnDestroy() {

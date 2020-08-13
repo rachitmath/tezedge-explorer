@@ -29,19 +29,6 @@ export class ChainSetupComponent implements OnInit, OnDestroy {
       operationsBlock: ['16384', Validators.required],
       preservedCycle: ['5', Validators.required]
     });
-
-    this.store.dispatch({
-      type: 'CHAIN_SETUP_LOAD',
-      payload: '',
-    });
-
-    this.store.select('chainSetupAction')
-      .pipe(takeUntil(this.onDestroy$))
-      .subscribe((data) => {
-        if (data.stream) {
-          // this.setFormValue(data.entities);
-        }
-      });
   }
 
   setFormValue(chainSetup) {

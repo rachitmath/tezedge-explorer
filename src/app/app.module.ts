@@ -61,6 +61,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSelectModule } from '@angular/material/select';
+import { MatStepperModule } from '@angular/material/stepper';
 
 import { NetworkStatsComponent } from './network/network-stats/network-stats.component';
 import { NetworkHistoryComponent } from './network/network-history/network-history.component';
@@ -98,8 +99,11 @@ import { ChainFinishComponent } from './chain/chain-finish/chain-finish.componen
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { SvgIconComponent } from './shared/svg-icon/svg-icon.component';
 import { SandboxComponent } from './sandbox/sandbox.component';
-import { SandboxEffects } from './sandbox/sandbox.effects';
-
+import { NgrxFormDirective } from './shared/directives/ngrx-form.directive';
+import { ChainEffects } from './chain/chain.effects';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -127,6 +131,14 @@ import { SandboxEffects } from './sandbox/sandbox.effects';
     LogsActionComponent,
     LogsSearchComponent,
     LogsComponent,
+    ChainComponent,
+    ChainServerComponent,
+    ChainSetupComponent,
+    ChainWalletsComponent,
+    ChainBakingComponent,
+    ChainOtherComponent,
+    ChainFinishComponent,
+    NgrxFormDirective,
     SandboxComponent
   ],
   imports: [
@@ -168,7 +180,7 @@ import { SandboxEffects } from './sandbox/sandbox.effects';
       LogsActionEffects,
       SettingsEffects,
       SettingsNodeEffects,
-      SandboxEffects
+      ChainEffects
     ]),
     // Connects RouterModule with StoreModule
     StoreRouterConnectingModule.forRoot(),
@@ -185,7 +197,7 @@ import { SandboxEffects } from './sandbox/sandbox.effects';
     MatTableModule,
     // MatDatepickerModule,
     // MatDialogModule,
-    // MatExpansionModule,
+    MatExpansionModule,
     MatFormFieldModule,
     // MatGridListModule,
     MatIconModule,
@@ -198,11 +210,11 @@ import { SandboxEffects } from './sandbox/sandbox.effects';
     // MatRadioModule,
     MatSelectModule,
     MatSidenavModule,
-    // MatSlideToggleModule,
+    MatSlideToggleModule,
     // MatSliderModule,
     MatSnackBarModule,
     // MatSortModule,
-    // MatStepperModule,
+    MatStepperModule,
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,

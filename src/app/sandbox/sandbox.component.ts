@@ -18,12 +18,7 @@ export class SandboxComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.store.dispatch({
-      type: 'SANDBOX_LOAD',
-      payload: '',
-    });
-
-    this.store.select('sandboxAction')
+    this.store.select('chainAction')
       .pipe(takeUntil(this.onDestroy$))
       .subscribe((data) => {
         if (data) {

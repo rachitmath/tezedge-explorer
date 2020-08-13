@@ -31,7 +31,7 @@ export const AppRouting: Routes = [
 
   { path: 'settings', component: SettingsComponent },
 
-  { path: 'chain', loadChildren: () => import('./chain/chain.module').then(m => m.ChainModule) },
+  { path: 'chain', component: ChainComponent },
 
   // { path: '', redirectTo: '/network', pathMatch: 'full' },
   // { path: '**', component: PageNotFoundComponent }
