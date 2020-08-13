@@ -42,6 +42,22 @@ export class ChainServerComponent implements OnInit {
           this.chainServerFormData = data['server']['form'];
         }
       });
+
+    this.store.select('chainAction')
+      .pipe(takeUntil(this.onDestroy$))
+      .subscribe((data: any) => {
+        if (data.stream) {
+          this.setFormValue(data.entities);
+        }
+      });
+
+  }
+
+  setFormValue(data) {
+    this.chainServerForm.patchValue({
+      port: data.quorum_min,
+      chainId: data.test_chain_duration
+    });
   }
 
   onSubmit() {

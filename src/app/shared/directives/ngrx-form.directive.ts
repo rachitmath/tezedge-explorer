@@ -19,12 +19,10 @@ export class NgrxFormDirective implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
-    console.log(this.path);
     // listen & dispatch action when input value changes
     this.formGroupDirective.valueChanges
       .pipe(takeUntil(this.destroy$))
       .subscribe(value => {
-        console.log(value);
 
         this.store.dispatch({
           type: 'FORM_VALUE_CHANGES',

@@ -11,6 +11,7 @@ import { takeUntil } from 'rxjs/operators';
 export class SandboxComponent implements OnInit {
 
   public onDestroy$ = new Subject();
+  public chainData;
 
   constructor(
     public store: Store<any>,
@@ -18,11 +19,12 @@ export class SandboxComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.store.select('chainAction')
+    this.store.select('chain')
       .pipe(takeUntil(this.onDestroy$))
-      .subscribe((data) => {
+      .subscribe((data: any) => {
         if (data) {
-          console.log(data.entities);
+          // tslint:disable-next-line: no-string-literal
+          this.chainData = data['server']['form'];
         }
       });
 
