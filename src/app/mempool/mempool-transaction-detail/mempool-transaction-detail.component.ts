@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-mempool-transaction-detail',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mempool-transaction-detail.component.scss']
 })
 export class MempoolTransactionDetailComponent implements OnInit {
+
+  @Input() currentTransaction: [];
 
   constructor() { }
 

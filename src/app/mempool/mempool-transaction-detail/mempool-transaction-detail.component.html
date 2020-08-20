@@ -8,9 +8,13 @@
         </span>
     </div>
     <div class="transaction-card">
-        <mat-tab-group>
+        <!-- <mat-tab-group>
             <mat-tab label="CONTRACTS"></mat-tab>
             <mat-tab label="TRANSACTIONS"></mat-tab>
-        </mat-tab-group>
+        </mat-tab-group> -->
+        <div *ngIf="currentTransaction">
+            <ngx-json-viewer [json]="currentTransaction" [expanded]="false">
+            </ngx-json-viewer>
+        </div>
     </div>
 </div>

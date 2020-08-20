@@ -5,10 +5,12 @@
         </div>
         <div class="mempool-body">
             <div class="mempool-list">
-                <app-mempool-transaction-table></app-mempool-transaction-table>
+                <app-mempool-transaction-table [mempoolTableList]="mempoolList"
+                    (transactionEvent)="onChangeTransaction($event)"></app-mempool-transaction-table>
             </div>
             <div class="mempool-detail">
-                <app-mempool-transaction-detail></app-mempool-transaction-detail>
+                <app-mempool-transaction-detail [currentTransaction]="currentTransaction">
+                </app-mempool-transaction-detail>
             </div>
         </div>
     </div>

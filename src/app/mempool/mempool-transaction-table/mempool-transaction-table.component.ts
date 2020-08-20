@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-mempool-transaction-table',
@@ -9,9 +9,17 @@ export class MempoolTransactionTableComponent implements OnInit {
 
   public transactions = new Array<any>(3);
 
+  @Input() mempoolTableList: [];
+  @Output() transactionEvent = new EventEmitter<any>();
+
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  showTransaction(transaction) {
+    this.transactionEvent.emit(transaction);
   }
 
 }

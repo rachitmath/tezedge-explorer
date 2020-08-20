@@ -42,9 +42,9 @@ import { NetworkComponent } from './network/network.component';
 import { NetworkPeersComponent } from './network/network-peers/network-peers.component';
 
 
-import { MatAutocompleteModule } from '@angular/material/autocomplete'; 
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
-import { MatButtonToggleModule  } from '@angular/material/button-toggle';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -93,6 +93,8 @@ import { MempoolComponent } from './mempool/mempool.component';
 import { MempoolFiltersComponent } from './mempool/mempool-filters/mempool-filters.component';
 import { MempoolTransactionTableComponent } from './mempool/mempool-transaction-table/mempool-transaction-table.component';
 import { MempoolTransactionDetailComponent } from './mempool/mempool-transaction-detail/mempool-transaction-detail.component';
+import { MempoolEffects } from './mempool/mempool.effects';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
 
 
 @NgModule({
@@ -165,7 +167,10 @@ import { MempoolTransactionDetailComponent } from './mempool/mempool-transaction
       LogsActionEffects,
       SettingsEffects,
       SettingsNodeEffects,
+      MempoolEffects
     ]),
+
+    StoreRouterConnectingModule.forRoot(),
 
     // https://github.com/zalmoxisus/redux-devtools-extension
     !environment.production ? StoreDevtoolsModule.instrument({ maxAge: 50 }) : [],
