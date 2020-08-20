@@ -89,6 +89,10 @@ import { SettingsNodeComponent } from './settings/settings-node/settings-node.co
 import { LogsActionComponent } from './logs/logs-action/logs-action.component';
 import { LogsSearchComponent } from './logs/logs-search/logs-search.component';
 import { LogsComponent } from './logs/logs.component';
+import { MempoolComponent } from './mempool/mempool.component';
+import { MempoolFiltersComponent } from './mempool/mempool-filters/mempool-filters.component';
+import { MempoolTransactionTableComponent } from './mempool/mempool-transaction-table/mempool-transaction-table.component';
+import { MempoolTransactionDetailComponent } from './mempool/mempool-transaction-detail/mempool-transaction-detail.component';
 
 
 @NgModule({
@@ -116,7 +120,11 @@ import { LogsComponent } from './logs/logs.component';
     SettingsNodeComponent,
     LogsActionComponent,
     LogsSearchComponent,
-    LogsComponent
+    LogsComponent,
+    MempoolComponent,
+    MempoolFiltersComponent,
+    MempoolTransactionTableComponent,
+    MempoolTransactionDetailComponent
   ],
   imports: [
     BrowserModule,

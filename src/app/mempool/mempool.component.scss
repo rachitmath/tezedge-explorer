@@ -1,0 +1,39 @@
+.mempool-container {
+    background-color: #1d212b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 25px;
+
+    .mempool-card {
+        color: #f0f3f7;
+        background-color: #2f3848;
+        border: 1px solid #434b5b;
+        box-sizing: border-box;
+        border-radius: 4px;
+        width: 95%;
+        margin: 10px;
+
+        .mempool-header {
+            font-family: Roboto;
+            font-size: 14px;
+            line-height: 24px;
+            color: rgba(240, 243, 247, 0.6);
+            mix-blend-mode: normal;
+            border-bottom: 1px solid #434b5b;
+        }
+
+        .mempool-body {
+            display: flex;
+
+            .mempool-list {
+                width: 100%;
+            }
+
+            .mempool-detail {
+                width: 344px;
+            }
+        }
+    }
+}

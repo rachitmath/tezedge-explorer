@@ -10,6 +10,7 @@ import { MonitoringComponent } from './monitoring/monitoring.component';
 import { StorageComponent } from './storage/storage.component';
 import { StorageActionComponent } from './storage/storage-action/storage-action.component';
 import { SettingsComponent } from './settings/settings.component';
+import { MempoolComponent } from './mempool/mempool.component';
 
 export const AppRouting: Routes = [
 
@@ -29,6 +30,8 @@ export const AppRouting: Routes = [
   { path: 'storage/:search', component: StorageActionComponent },
 
   { path: 'settings', component: SettingsComponent },
+
+  { path: 'mempool', component: MempoolComponent },
 
   // { path: '', redirectTo: '/network', pathMatch: 'full' },
   // { path: '**', component: PageNotFoundComponent }

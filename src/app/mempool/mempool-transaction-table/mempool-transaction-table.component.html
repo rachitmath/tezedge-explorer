@@ -1,0 +1,39 @@
+<div class="table-virtual-scroll">
+    <cdk-virtual-scroll-viewport [itemSize]="50" class="example-viewport">
+        <table class="table">
+            <thead align="left">
+                <tr class="bg-light">
+                    <th>
+                        COLUMN
+                    </th>
+                    <th>
+                        <span>
+                            COLUMN
+                            <svg-icon icon="question-circle-small"></svg-icon>
+                        </span>
+                    </th>
+                    <th>
+                        <span>
+                            COLUMN
+                            <svg-icon icon="question-circle-small"></svg-icon>
+                        </span>
+                    </th>
+                    <th>
+                        <span>
+                            COLUMN
+                            <svg-icon icon="question-circle-small"></svg-icon>
+                        </span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody align="left">
+                <tr *cdkVirtualFor="let transaction of [0,1,2,3,4]">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </cdk-virtual-scroll-viewport>
+</div>

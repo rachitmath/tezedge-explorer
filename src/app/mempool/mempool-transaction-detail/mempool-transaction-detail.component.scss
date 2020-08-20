@@ -1,0 +1,44 @@
+.mempool-transaction-detail {
+  .transaction-header {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgba(240, 243, 247, 0.6);
+    mix-blend-mode: normal;
+    border-bottom: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0px 7px 15px;
+  }
+
+  .transaction-card {
+    background-color: #2f3848;
+    border: 1px solid #434b5b;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: padding-box;
+    height: 378px;
+    margin-left: 6px;
+    margin-right: 8px;
+  }
+}
+
+::ng-deep .mat-ink-bar {
+  background-color: transparent !important;
+}
+
+::ng-deep .mat-tab-label.mat-tab-label-active {
+  color: #fff;
+}
+
+::ng-deep .mat-tab-label {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  font-size: 12px;
+  font-family: Roboto;
+}
+
+::ng-deep .mat-tab-header {
+  border-bottom: 1px solid #434b5b;
+}

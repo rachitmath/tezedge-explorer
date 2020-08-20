@@ -1,0 +1,39 @@
+.mempool-filter-title {
+    color: rgba(255, 255, 255, 0.4);
+    mix-blend-mode: normal;
+    padding: 7px 0px 7px 15px;
+    border-bottom: 1px solid #434b5b;
+    font-size: 12px;
+}
+
+.mempool-filter-list {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 12px;
+    mix-blend-mode: normal;
+    padding: 7px 0px 7px 15px;
+    display: flex;
+    align-items: center;
+
+    .mempool-filter-group {
+        display: flex;
+        align-items: center;
+
+        mat-chip {
+            color: #ffffff;
+            font-size: 12px;
+            background-color: rgba(255, 255, 255, 0.2) !important;
+            border: 1px solid #434b5b !important;
+            min-height: 20px;
+            font-weight: normal;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            padding-right: 7px;
+            padding-left: 0;
+            font-family: Roboto;
+
+            svg-icon {
+                height: 21px;
+            }
+        }
+    }
+}
