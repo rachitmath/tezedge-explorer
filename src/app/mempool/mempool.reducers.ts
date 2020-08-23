@@ -1,6 +1,7 @@
 import { ActionReducerMap, ActionReducer, State } from '@ngrx/store';
 
 const initialState: any = {
+    id: [],
     transactions: {},
     stream: false,
 };
@@ -11,6 +12,7 @@ export function reducer(state = initialState, action: any) {
         case 'MEMPOOL_START_SUCCESS': {
             return {
                 ...state,
+                id: Object.keys(action.payload),
                 transactions: mapTransaction(action.payload),
                 stream: true,
             };
@@ -30,22 +32,52 @@ function mapTransaction(rawTransaction: any) {
 
     const result = [];
     Object.keys(rawTransaction).map((value) => {
-        rawTransaction[value].map((data: any) => {
-            if (data.length > 1) {
-                data.map(transaction => {
-                    result.push({
-                        type: value,
-                        transaction,
+        if (rawTransaction[value].length > 0) {
+            rawTransaction[value].map((data: any) => {
+                if (data && data.length > 0) {
+                    data.map(transaction => {
+                        if (transaction.contents) {
+                            transaction.contents?.map(content => {
+                                result.push({
+                                    type: value,
+                                    kind: content?.kind,
+                                    transaction
+                                });
+                            });
+                        } else {
+                            result.push({
+                                type: value,
+                                kind: '',
+                                transaction
+                            });
+                        }
                     });
-                });
-            } else {
-                result.push({
-                    type: value,
-                    transaction: data,
-                });
-            }
-        });
+                } else {
+                    if (data.contents.length > 0) {
+                        data.contents?.map(content => {
+                            result.push({
+                                type: value,
+                                kind: content?.kind,
+                                transaction: data
+                            });
+                        });
+                    } else {
+                        result.push({
+                            type: value,
+                            kind: '',
+                            transaction: data
+                        });
+                    }
+                }
+            });
+        } else {
+            result.push({
+                type: value,
+                kind: '',
+                transaction: ''
+            });
+        }
     });
-
+    console.log(result);
     return result;
 }

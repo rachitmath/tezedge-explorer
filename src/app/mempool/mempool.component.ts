@@ -27,33 +27,13 @@ export class MempoolComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this.onDestroy$))
       .subscribe((data: any) => {
         if (data.stream) {
-          this.mempoolAction = data.transactions;
-          // console.log(this.mempoolAction);
-          this.mempoolAction.forEach(action => {
-            if (action.transaction.contents) {
-              action.transaction.contents?.map(transaction => {
-                // console.log(transaction);
-                this.mempoolList.push({
-                  type: action.type,
-                  kind: transaction?.kind,
-                  transaction: action.transaction
-                });
-              });
-            } else {
-              this.mempoolList.push({
-                type: action.type,
-                kind: '',
-                transaction: action.transaction
-              });
-            }
-          });
-          // console.log(this.mempoolList);
+          this.mempoolList = data.transactions;
         }
       });
   }
 
   onChangeTransaction(event) {
-    this.currentTransaction = event
+    this.currentTransaction = event;
   }
 
   ngOnDestroy() {
