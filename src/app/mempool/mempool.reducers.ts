@@ -44,12 +44,6 @@ function mapTransaction(rawTransaction: any) {
                                     transaction
                                 });
                             });
-                        } else {
-                            result.push({
-                                type: value,
-                                kind: '',
-                                transaction
-                            });
                         }
                     });
                 } else {
@@ -69,12 +63,6 @@ function mapTransaction(rawTransaction: any) {
                         });
                     }
                 }
-            });
-        } else {
-            result.push({
-                type: value,
-                kind: '',
-                transaction: ''
             });
         }
     });
